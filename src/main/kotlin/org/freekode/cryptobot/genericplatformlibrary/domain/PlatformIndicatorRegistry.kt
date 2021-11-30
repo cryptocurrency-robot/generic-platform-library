@@ -3,7 +3,8 @@ package org.freekode.cryptobot.genericplatformlibrary.domain
 import org.springframework.stereotype.Service
 
 
-abstract class PlatformIndicatorRegistry(
+@Service
+open class PlatformIndicatorRegistry(
     indicators: List<PlatformIndicator>
 ) {
     private val indicatorMap: Map<IndicatorId, PlatformIndicator> =

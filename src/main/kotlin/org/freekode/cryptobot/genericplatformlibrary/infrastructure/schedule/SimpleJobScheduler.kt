@@ -7,10 +7,10 @@ import org.quartz.SimpleScheduleBuilder
 import org.quartz.TriggerBuilder
 import org.quartz.TriggerKey
 import org.springframework.scheduling.quartz.SchedulerFactoryBean
+import org.springframework.stereotype.Service
 
-abstract class SimpleJobScheduler(
-    schedulerFactoryBean: SchedulerFactoryBean
-) {
+@Service
+open class SimpleJobScheduler(schedulerFactoryBean: SchedulerFactoryBean) {
 
     private val scheduler: Scheduler
 
